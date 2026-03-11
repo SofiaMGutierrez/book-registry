@@ -1,0 +1,10 @@
+<app-sidebar
+ (genreSelected)="setGenre($event)"
+ (authorSelected)="toggleAuthor($event)">
+</app-sidebar>
+
+<app-book-list [books]="books"></app-book-list>
+
+<div *ngIf="books.length === 0">
+  No books found matching these filters.
+</div>
